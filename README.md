@@ -2,6 +2,35 @@
 
 这是一个用于 Obsidian 的扩展/插件（或“Skill”）项目，旨在将 AI 助手功能整合到 Obsidian 笔记工作流中，帮助加速写作、整理知识与生成内容模板。README 在此提供安装、配置、使用和开发说明；如果你的项目目标不同，可以在此基础上调整内容。
 
+## 什么是 Skill
+
+Skill 是一个**可复用的工作流包**，由 SKILL.md（YAML frontmatter + Markdown 指令）+ 可选的脚本/模板/参考文档组成。
+
+核心机制是 **渐进式披露（Progressive Disclosure）**：
+- 启动时只加载 `name` + `description`（约 100 tokens/skill）
+- Claude 按任务匹配 description，**命中后才加载完整指令**
+- 支持文件仅在显式需要时加载
+
+## 设计原则
+
+1. 职责单一 (Single Responsibility)
+一个Skill只做一件事，并且把它做好。职责单一、边界清晰的Skill更容易在正确的时机被选中并稳定执行。
+
+2. 边界明确 (Clear Boundaries)
+这是Skill稳定性的基石。模型最容易犯的错误，就是“不知道什么时候该做”。因此，必须明确界定：
+
+正向条件：明确什么情况下触发该Skill。
+
+负向条件：明确什么情况下不触发该Skill。
+
+输入输出：用清晰、结构化的方式定义Skill的Input和Output，如同定义函数的签名（Signature）。
+
+3. 步骤可执行 (Actionable Steps)
+Skill的核心是“步骤”，必须是指令式、具体的动作，而不是概括性的描述。要确保模型可以按部就班地执行。
+
+4. 失败策略完备 (Graceful Failure)
+必须预定义“失败路径”，告诉模型在不同异常情况下该如何处理，而不是让它自由发挥。
+
 ## 主要功能
 
 - AI 辅助内容生成：基于提示生成笔记、提纲、总结和扩展段落。
