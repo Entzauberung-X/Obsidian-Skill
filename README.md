@@ -23,7 +23,7 @@ Obsidian-Skill 是一组面向 Obsidian 的“Skill”工作流包，用于把�
 - math-formula-organizer — 考研数学一公式笔记系统：章节公式速查、专题、二级结论、错题归因与思路轨迹模版。
 - math-note-pattern-sync — 数学笔记模式同步：跨章节/跨科目的模式与格式化规范（编号、模板、审计与同步流程）。
 - signals-systems-organizer — 信号与系统（奥本海姆）笔记体系统一规范：本质优先的方法笔记模板、三层结构与综合练习生成规则。
-- signals-qianghua-planner — 843 信号与系统强化阶段计划生成器：按考纲权重拆周、生成强化计划与待补笔记清单（只写计划文件，不改已有笔记）。
+- signals-qianghua-planner — 信号与系统强化阶段计划生成器：按考纲权重拆周、生成强化计划与待补笔记清单（只写计划文件，不改已有笔记）。
 
 ---
 
