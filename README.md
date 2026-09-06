@@ -19,4 +19,5 @@ A lightweight Obsidian plugin that adds small automation and productivity helper
 Contributions welcome — open an issue or submit a pull request with tests and a short description.
 
 ## License
-See the repository LICENSE file (or add a license of your choice).
+This project is for study and research purposes only.
+
